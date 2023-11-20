@@ -1,0 +1,48 @@
+body {
+    background-color: #d9dce3;
+}
+
+.input {
+    position: relative;
+    line-height: 14px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+label {
+    color: #4d4d4d;
+    font-size: 11px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 14px;
+    padding: 0 2px;
+    background-color: #d9dce3;
+    transition: transform .2s ease;
+
+}
+
+input {
+    font-size: 13px;
+    color: #4d4d4d;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #4d4d4d;
+    padding: 10px 20px;
+    background-color: #d9dce3;
+    transition: transform .2s ease;
+
+    &:invalid+label {
+        transform: translateY(0);
+    }
+
+    &:focus {
+        border-color: #4d4d4d;
+
+        &+label {
+            color: #4d4d4d;
+            transform: translateY(-20px);
+        }
+    }
+}
